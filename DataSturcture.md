@@ -137,22 +137,30 @@ Therefore, finding the minimum element in a min-heap is an O(1) operation.
  d. 143. Reorder List https://leetcode.com/problems/reorder...
 
 
-
 # 7 Pointer Manipulation
  a. 239. Sliding Window Maximum https://leetcode.com/problems/sliding...
  b. 3. Longest Substring Without Repeating Characters https://leetcode.com/problems/longest...
  c. 76. Minimum Window Substring https://leetcode.com/problems/minimum...
 
+
+
 # 8 Sorting
  a. Time -- O(N log N)
  b. Merge Sort -- Space O(N)
  c. Quick Sort
+ Merge Sort Quick Sort different
  d. 148. Sort List https://leetcode.com/problems/sort-list/
+
+
 
 # 9 Convert Real Life Problem to Code 
  a. 146. LRU Cache https://leetcode.com/problems/lru-cache/
  b. 1066. Compus Bike https://leetcode.com/problems/campus-...
  c. 490. The Maze https://leetcode.com/problems/the-maze/ 
+
+
+
+ 
 
 # 10 Time Space Complexity
  a. 一般面试的时候 你说完算法 就要说 这个算法的 time / space complexity是什么
