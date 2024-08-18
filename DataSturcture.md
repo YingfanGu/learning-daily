@@ -1,4 +1,4 @@
-# Recursion / Backtracking
+# 1 Recursion / Backtracking
  a. 39. Combination Sum https://leetcode.com/problems/combina...
  b. 40. Combination Sum II https://leetcode.com/problems/combina...
  c. 78. Subsets https://leetcode.com/problems/subsets/
@@ -8,7 +8,7 @@
 
 
 
-# Graph Traversal - DFS, BFS, Topological Sorting
+# 2 Graph Traversal - DFS, BFS, Topological Sorting
  a. 133. Clone Graph https://leetcode.com/problems/clone-g... BFS / DFS
  b. 127. Word Ladder https://leetcode.com/problems/word-la... BFS
  c. 490. The Maze https://leetcode.com/problems/the-maze/ 
@@ -22,7 +22,7 @@ Kahn’s algorithm
 **A star algorithm (heuristic functions)**
 
 
-# Binary Tree / Binary Search Tree (BST)
+# 3 Binary Tree / Binary Search Tree (BST)
 
 Divide conquers
  a. 94. Binary Tree Inorder Traversal https://leetcode.com/problems/binary-...
@@ -33,13 +33,13 @@ Divide conquers
 
 
 
-# Binary Search (二分法) OlogN
+# 4 Binary Search (二分法) OlogN
  a. 34. Find First and Last Position of Element in Sorted Array https://leetcode.com/problems/find-fi...
  b. 162. Find Peak Element https://leetcode.com/problems/find-pe...
  c. 69. Sqrt(x) https://leetcode.com/problems/sqrtx/
   
 
-# Data Structure
+# 5 Data Structure
  a. 242. Valid Anagram https://leetcode.com/problems/valid-a... (Hash Table)
  b. 133. Clone Graph https://leetcode.com/problems/clone-g... (Hash Table)
  c. 127. Word Ladder https://leetcode.com/problems/word-la... (Hash Table)
@@ -64,6 +64,24 @@ Insert
 delete
 
 ## Hash Table 
+Here’s a summary of the time complexities for the search, insert, and delete operations in hash tables:
+1.	Insert:
+o	Average Case: O(1)O(1)O(1)
+o	Worst Case: O(n)O(n)O(n)
+o	Explanation: In the average case, inserting an element into a hash table is constant time because it involves computing the hash of the key and placing the element in the appropriate bucket. However, in the worst case, if many elements hash to the same bucket (causing a collision), and the collision resolution strategy involves traversing a linked list or another data structure, the time complexity can degrade to linear in the number of elements.
+2.	Delete:
+o	Average Case: O(1)O(1)O(1)
+o	Worst Case: O(n)O(n)O(n)
+o	Explanation: Deletion follows a similar pattern to insertion. In the average case, it's constant time because the element can be directly accessed and removed using the hash value. In the worst case, if there are many collisions, finding the element to delete might require traversing a linked list or another structure, resulting in linear time complexity.
+3.	Search:
+o	Average Case: O(1)O(1)O(1)
+o	Worst Case: O(n)O(n)O(n)
+o	Explanation: Searching for an element in a hash table is typically constant time on average because the hash function allows direct access to the bucket where the element should reside. However, in the worst case, with many collisions, searching might require traversing through elements in a bucket, resulting in a linear time complexity.
+To summarize:
+•	Insert: O(1)O(1)O(1) average, O(n)O(n)O(n) worst case
+•	Delete: O(1)O(1)O(1) average, O(n)O(n)O(n) worst case
+•	Search: O(1)O(1)O(1) average, O(n)O(n)O(n) worst case
+The efficiency of hash tables heavily depends on the quality of the hash function and the load factor (the ratio of the number of elements to the number of buckets). A well-designed hash table with a good hash function and appropriate load factor will generally provide constant time performance for these operations.
 
 
 
@@ -88,11 +106,11 @@ o	Removing the element from the top of the stack is also a constant time operati
 o	Searching for an element in a stack requires traversing the stack from the top to the bottom (or vice versa), which means the time complexity is linear, depending on the number of elements in the stack.
 The O(1)O(1)O(1) time complexity for push and pop operations makes stacks highly efficient for scenarios where only the most recently added element needs to be accessed, while the linear time complexity for search reflects that stacks are not optimized for finding arbitrary elements quickly.
 
-## Heap
+## Heap (priority queue find K smallest sth)
 A heap is a specialized tree-based data structure that satisfies the heap property (in a max-heap, the parent node is always greater than or equal to its children; in a min-heap, the parent node is always less than or equal to its children). Here are the time complexities for the search, insert, and delete operations in a heap:
-1.	Insert: O(log⁡n)O(\log n)O(logn)
+1.	Insert: O(log⁡n)
 o	When inserting an element into a heap, the element is initially added at the end of the heap (at the next available position in the array representation). Then, the heap property is restored by "bubbling up" the element (also known as "heapify-up" or "sift-up"). This process takes logarithmic time because it might require comparing and swapping elements along the height of the tree, which is log⁡n\log nlogn for a heap with nnn elements.
-2.	Delete (or Extract Max/Min): O(log⁡n)O(\log n)O(logn)
+2.	Delete (or Extract Max/Min): O(log⁡n)
 o	Deletion in a heap typically refers to removing the root element (the maximum element in a max-heap or the minimum element in a min-heap). After removing the root, the last element in the heap is moved to the root position, and the heap property is restored by "bubbling down" (or "heapify-down" or "sift-down") the element. This operation also takes logarithmic time, as it might involve moving down the tree's height.
 3.	Search: O(n)O(n)O(n)
 o	Searching for a specific element in a heap requires a linear scan of the elements because the heap does not have a sorted structure, only a partial order property. Therefore, in the worst case, the time complexity for searching an element is O(n)O(n)O(n).
@@ -104,10 +122,15 @@ Heaps are particularly useful for priority queues, where the most important elem
 
 
 
+**The time complexity to find the minimum element in a min-heap is O(1).**
+
+Explanation:
+Min-Heap Property: In a min-heap, the smallest element is always at the root, which is the first element in the array representation of the heap.
+Accessing the Minimum: Since the minimum element is always located at the root, accessing it requires no traversal or additional computation, making the operation a constant time operation.
+Therefore, finding the minimum element in a min-heap is an O(1) operation.
 
 
-
-# Linked List Manipulation
+# 6 Linked List Manipulation (链表)
  a. 237. Delete Node in a Linked List https://leetcode.com/problems/delete-...
  b. 92. Reverse Linked List II https://leetcode.com/problems/reverse...
  c. 876. Middle of the Linked List https://leetcode.com/problems/middle-...
@@ -115,5 +138,24 @@ Heaps are particularly useful for priority queues, where the most important elem
 
 
 
+# 7 Pointer Manipulation
+ a. 239. Sliding Window Maximum https://leetcode.com/problems/sliding...
+ b. 3. Longest Substring Without Repeating Characters https://leetcode.com/problems/longest...
+ c. 76. Minimum Window Substring https://leetcode.com/problems/minimum...
+
+# 8 Sorting
+ a. Time -- O(N log N)
+ b. Merge Sort -- Space O(N)
+ c. Quick Sort
+ d. 148. Sort List https://leetcode.com/problems/sort-list/
+
+# 9 Convert Real Life Problem to Code 
+ a. 146. LRU Cache https://leetcode.com/problems/lru-cache/
+ b. 1066. Compus Bike https://leetcode.com/problems/campus-...
+ c. 490. The Maze https://leetcode.com/problems/the-maze/ 
+
+# 10 Time Space Complexity
+ a. 一般面试的时候 你说完算法 就要说 这个算法的 time / space complexity是什么
+ b. 每次你做完一道题 给自己养成一个习惯 就是想一下他的时间空间复杂度是多少
 
 
