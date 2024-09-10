@@ -1,16 +1,16 @@
 # 1 Recursion / Backtracking
- a. 39. Combination Sum https://leetcode.com/problems/combina...
- b. 40. Combination Sum II https://leetcode.com/problems/combina...
- c. 78. Subsets https://leetcode.com/problems/subsets/
- d. 90. Subsets II https://leetcode.com/problems/subsets...
- e. 46. Permutations https://leetcode.com/problems/permuta...
- f. 47. Permutations II https://leetcode.com/problems/permuta...
+ a. 39. Combination Sum https://leetcode.com/problems/combina...  check
+ b. 40. Combination Sum II https://leetcode.com/problems/combina... check
+ c. 78. Subsets https://leetcode.com/problems/subsets/ check
+ d. 90. Subsets II https://leetcode.com/problems/subsets... check
+ e. 46. Permutations https://leetcode.com/problems/permuta... check
+ f. 47. Permutations II https://leetcode.com/problems/permuta... check
 
 
 
-# 2 Graph Traversal - DFS, BFS, Topological Sorting
- a. 133. Clone Graph https://leetcode.com/problems/clone-g... BFS / DFS
- b. 127. Word Ladder https://leetcode.com/problems/word-la... BFS
+# 2 Graph Traversal - DFS, BFS, Topological Sorting  **
+ a. 133. Clone Graph https://leetcode.com/problems/clone-g... BFS / DFS check
+ b. 127. Word Ladder https://leetcode.com/problems/word-la... BFS check
  c. 490. The Maze https://leetcode.com/problems/the-maze/ 
 
 Kahn’s algorithm
@@ -19,7 +19,11 @@ Kahn’s algorithm
 
 **Dijkstra’s algorithm (weight)**
 
+
+
 **A star algorithm (heuristic functions)**
+
+
 
 
 # 3 Binary Tree / Binary Search Tree (BST)
@@ -88,23 +92,23 @@ The efficiency of hash tables heavily depends on the quality of the hash functio
 
 ## Queue
 In a queue, the operations of search, insert (enqueue), and delete (dequeue) typically have the following time complexities:
-1.	Enqueue (Insert): O(1)O(1)O(1)
-o	Adding an element to the rear of the queue is done in constant time because the location to insert is always known and does not depend on the size of the queue.
-2.	Dequeue (Delete): O(1)O(1)O(1)
+1.	Enqueue (Insert): O(1)
+o	Adding an element to the rear of the queue is done in constant time because the location to insert is always known and does not depend on the size of the queue.  
+2.	Dequeue (Delete): O(1)
 o	Removing an element from the front of the queue is also a constant time operation. The position to remove from is always the front, so no searching or shifting of elements is required.
-3.	Search: O(n)O(n)O(n)
+3.	Search: O(n)
 o	Searching for an element in a queue, however, does not have a direct access mechanism like arrays do. To find an element, you may need to traverse from the front to the back of the queue, inspecting each element. Therefore, this operation is linear in time complexity, depending on the number of elements in the queue.
 These complexities are typical of most queue implementations, assuming no additional optimizations or data structures are used to facilitate faster search operations.
 
 ## Stack
 In a stack, the time complexities for the search, insert (push), and delete (pop) operations are as follows:
-1.	Push (Insert): O(1)O(1)O(1)
+1.	Push (Insert): O(1)
 o	Adding an element to the top of the stack is a constant time operation because it simply involves placing the element at the top of the stack.
-2.	Pop (Delete): O(1)O(1)O(1)
+2.	Pop (Delete): O(1)
 o	Removing the element from the top of the stack is also a constant time operation, as it only involves removing the topmost element.
-3.	Search: O(n)O(n)O(n)
+3.	Search: O(n)
 o	Searching for an element in a stack requires traversing the stack from the top to the bottom (or vice versa), which means the time complexity is linear, depending on the number of elements in the stack.
-The O(1)O(1)O(1) time complexity for push and pop operations makes stacks highly efficient for scenarios where only the most recently added element needs to be accessed, while the linear time complexity for search reflects that stacks are not optimized for finding arbitrary elements quickly.
+The O(1) time complexity for push and pop operations makes stacks highly efficient for scenarios where only the most recently added element needs to be accessed, while the linear time complexity for search reflects that stacks are not optimized for finding arbitrary elements quickly.
 
 ## Heap (priority queue find K smallest sth)
 A heap is a specialized tree-based data structure that satisfies the heap property (in a max-heap, the parent node is always greater than or equal to its children; in a min-heap, the parent node is always less than or equal to its children). Here are the time complexities for the search, insert, and delete operations in a heap:
