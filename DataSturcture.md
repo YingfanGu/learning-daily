@@ -11,7 +11,7 @@
 # 2 Graph Traversal - DFS, BFS, Topological Sorting  **
  a. 133. Clone Graph https://leetcode.com/problems/clone-g... BFS / DFS check
  b. 127. Word Ladder https://leetcode.com/problems/word-la... BFS check
- c. 490. The Maze https://leetcode.com/problems/the-maze/ check
+ c. 490. The Maze https://leetcode.com/problems/the-maze/ 
 
 Kahn’s algorithm
  d. 210. Course Schedule II https://leetcode.com/problems/course-... (Topological Sorting)
@@ -67,6 +67,46 @@ Search
 Insert
 delete
 
+## Array
+
+针对数组类型，很多语言都提供了容器类，比如Java中的ArrayList、C++ STL中的vector。在项目开发中，什么时候适合用数组，什么时候适合用容器呢？
+
+这里我拿Java语言来举例。如果你是Java工程师，几乎天天都在用ArrayList，对它应该非常熟悉。那它与数组相比，到底有哪些优势呢？
+
+我个人觉得，ArrayList最大的优势就是可以将很多数组操作的细节封装起来。比如前面提到的数组插入、删除数据时需要搬移其他数据等。另外，它还有一个优势，就是支持动态扩容。
+
+https://doc.vercel.app/ds/article/40961.html#%E8%AD%A6%E6%83%95%E6%95%B0%E7%BB%84%E7%9A%84%E8%AE%BF%E9%97%AE%E8%B6%8A%E7%95%8C%E9%97%AE%E9%A2%98
+### Search O(1) 根据下标
+
+这里我要特别纠正一个“错误”。我在面试的时候，常常会问数组和链表的区别，很多人都回答说，“链表适合插入、删除，时间复杂度O(1)；数组适合查找，查找时间复杂度为O(1)”。
+
+实际上，这种表述是不准确的。数组是适合查找操作，但是查找的时间复杂度并不为O(1)。即便是排好序的数组，你用二分查找，时间复杂度也是O(logn)。所以，正确的表述应该是，数组支持随机访问，根据下标随机访问的时间复杂度为O(1)。
+
+
+### Insert O(n)
+假设数组的长度为n，现在，如果我们需要将一个数据插入到数组中的第k个位置。为了把第k个位置腾出来，给新来的数据，我们需要将第k～n这部分的元素都顺序地往后挪一位。那插入操作的时间复杂度是多少呢？你可以自己先试着分析一下。
+如果在数组的末尾插入元素，那就不需要移动数据了，这时的时间复杂度为O(1)。但如果在数组的开头插入元素，那所有的数据都需要依次往后移动一位，所以最坏时间复杂度是O(n)。 因为我们在每个位置插入元素的概率是一样的，所以平均情况时间复杂度为(1+2+…n)/n=O(n)。
+
+### delete O(n)
+跟插入数据类似，如果我们要删除第k个位置的数据，为了内存的连续性，也需要搬移数据，不然中间就会出现空洞，内存就不连续了。
+
+和插入类似，如果删除数组末尾的数据，则最好情况时间复杂度为O(1)；如果删除开头的数据，则最坏情况时间复杂度为O(n)；平均情况时间复杂度也为O(n)。
+
+
+
+## Linked list
+数组需要一块连续的内存空间来存储，对内存的要求比较高。如果我们申请一个100MB大小的数组，当内存中没有连续的、足够大的存储空间时，即便内存的剩余总可用空间大于100MB，仍然会申请失败。
+
+而链表恰恰相反，它并不需要一块连续的内存空间，它通过“指针”将一组零散的内存块串联起来使用，所以如果我们申请的是100MB大小的链表，根本不会有问题。
+
+三种最常见的链表结构，它们分别是：单链表、双向链表和循环链表
+
+
+
+
+
+
+
 ## Hash Table 
 Here’s a summary of the time complexities for the search, insert, and delete operations in hash tables:
 1.	Insert:
@@ -111,13 +151,27 @@ o	Searching for an element in a stack requires traversing the stack from the top
 The O(1) time complexity for push and pop operations makes stacks highly efficient for scenarios where only the most recently added element needs to be accessed, while the linear time complexity for search reflects that stacks are not optimized for finding arbitrary elements quickly.
 
 ## Heap (priority queue find K smallest sth)
+
+
+而堆就是**一类特殊的数据结构**的统称。堆通常是一个可以被看做一棵树(完全)的数组对象。且总是满足以下规则：
+
+- 堆总是一棵**完全二叉树** 
+- 每个节点总是大于(或小于)它的孩子节点。
+
+**对于完全二叉树**，我想大家都能明白，就是最底层叶子节点要严格按照从左向右来。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201006234654325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNjkzMTcx,size_1,color_FFFFFF,t_70)
+**堆有大根堆和小根堆**，如果是所有父节点都大于子节点的时候，那么这就是个大根堆，反之则为小根堆，以下就是一个大根堆：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20201019214838156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNjkzMTcx,size_1,color_FFFFFF,t_70)
+最后需要注意的是我们并不是用链式去储存这个二叉树而是用**数组去存储这个树**，虽然链式的使用场景可能更多一些，但是在完全二叉树的情况下空间使用率较好没有斜树的出现。并且在操作的时候可以直接通过编号找到位置进行交换。
+
+
 A heap is a specialized tree-based data structure that satisfies the heap property (in a max-heap, the parent node is always greater than or equal to its children; in a min-heap, the parent node is always less than or equal to its children). Here are the time complexities for the search, insert, and delete operations in a heap:
 1.	Insert: O(log⁡n)
 o	When inserting an element into a heap, the element is initially added at the end of the heap (at the next available position in the array representation). Then, the heap property is restored by "bubbling up" the element (also known as "heapify-up" or "sift-up"). This process takes logarithmic time because it might require comparing and swapping elements along the height of the tree, which is log⁡n\log nlogn for a heap with nnn elements.
 2.	Delete (or Extract Max/Min): O(log⁡n)
 o	Deletion in a heap typically refers to removing the root element (the maximum element in a max-heap or the minimum element in a min-heap). After removing the root, the last element in the heap is moved to the root position, and the heap property is restored by "bubbling down" (or "heapify-down" or "sift-down") the element. This operation also takes logarithmic time, as it might involve moving down the tree's height.
-3.	Search: O(n)O(n)O(n)
-o	Searching for a specific element in a heap requires a linear scan of the elements because the heap does not have a sorted structure, only a partial order property. Therefore, in the worst case, the time complexity for searching an element is O(n)O(n)O(n).
+3.	Search: O(n)
+o	Searching for a specific element in a heap requires a linear scan of the elements because the heap does not have a sorted structure, only a partial order property. Therefore, in the worst case, the time complexity for searching an element is O(n).
 To summarize:
 •	Insert: O(log⁡n)O(\log n)O(logn)
 •	Delete (or Extract Max/Min): O(log⁡n)O(\log n)O(logn)
@@ -135,6 +189,10 @@ Therefore, finding the minimum element in a min-heap is an O(1) operation.
 
 
 # 6 Linked List Manipulation (链表)
+
+search O(n)
+
+
  a. 237. Delete Node in a Linked List https://leetcode.com/problems/delete-...
  b. 92. Reverse Linked List II https://leetcode.com/problems/reverse...
  c. 876. Middle of the Linked List https://leetcode.com/problems/middle-...
