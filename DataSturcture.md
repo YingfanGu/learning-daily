@@ -48,8 +48,8 @@ Divide conquers
 
 
 
-# 4 Binary Search (二分法) OlogN
- a. 34. Find First and Last Position of Element in Sorted Array https://leetcode.com/problems/find-fi...
+# 4 Binary Search (二分法) O（logN）
+ a. 34. Find First and Last Position of Element in Sorted Array https://leetcode.com/problems/find-fi... check
  b. 162. Find Peak Element https://leetcode.com/problems/find-pe...
  c. 69. Sqrt(x) https://leetcode.com/problems/sqrtx/
   
