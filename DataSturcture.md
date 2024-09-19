@@ -29,13 +29,14 @@ Kahn’s algorithm
  e. 269. Alien Dictionary https://leetcode.com/problems/alien-d... (Topological Sorting)
 
 **Dijkstra’s algorithm (weight)**
+Time complexity O(|E| + |V|log|V|)
 
 
 
 **A star algorithm (heuristic functions)**
 
 
-
+https://paul.pub/a-star-algorithm/
 
 # 3 Binary Tree / Binary Search Tree (BST)
 
