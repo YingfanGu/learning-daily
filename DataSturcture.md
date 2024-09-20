@@ -35,13 +35,17 @@ Time complexity O(|E| + |V|log|V|)
 
 **A star algorithm (heuristic functions)**
 
-
 https://paul.pub/a-star-algorithm/
+
+F = G + H
+https://www.bilibili.com/video/BV1iG411v7b9/?spm_id_from=333.337.search-card.all.click&vd_source=1245de838130ee71ba0169feb6595e6d
+
+
 
 # 3 Binary Tree / Binary Search Tree (BST)
 
 Divide conquers
- a. 94. Binary Tree Inorder Traversal https://leetcode.com/problems/binary-...
+ a. 94. Binary Tree Inorder Traversal https://leetcode.com/problems/binary-... check
  b. 236. Lowest Common Ancestor of a Binary Tree https://leetcode.com/problems/lowest-...
  c. 297. Serialize and Deserialize Binary Tree https://leetcode.com/problems/seriali...
  d. 98. Validate Binary Search Tree https://leetcode.com/problems/validat...
