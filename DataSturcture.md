@@ -9,6 +9,12 @@ https://doc.vercel.app/ds/article/39922.html
 continue:
 https://doc.vercel.app/ds/article/41222.html
 
+
+
+Python 中使用 collections 中的双端队列 deque() ，其 popleft() 方法可达到 O(1) 时间复杂度；列表 list 的 pop(0) 方法时间复杂度为 O(N) 。
+
+
+
 # 1 Recursion / Backtracking
  a. 39. Combination Sum https://leetcode.com/problems/combina...  check
  b. 40. Combination Sum II https://leetcode.com/problems/combina... check
@@ -47,8 +53,8 @@ https://www.bilibili.com/video/BV1iG411v7b9/?spm_id_from=333.337.search-card.all
 Divide conquers
  a. 94. Binary Tree Inorder Traversal https://leetcode.com/problems/binary-... check
  b. 236. Lowest Common Ancestor of a Binary Tree https://leetcode.com/problems/lowest-...check
- c. 297. Serialize and Deserialize Binary Tree https://leetcode.com/problems/seriali...
- d. 98. Validate Binary Search Tree https://leetcode.com/problems/validat...
+ c. 297. Serialize and Deserialize Binary Tree https://leetcode.com/problems/seriali... check
+ d. 98. Validate Binary Search Tree https://leetcode.com/problems/validat...check
  e. 102. Binary Tree Level Order Traversal https://leetcode.com/problems/binary-... (BFS)
 
 
