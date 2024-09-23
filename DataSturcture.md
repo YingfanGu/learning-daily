@@ -26,6 +26,10 @@ Python 中使用 collections 中的双端队列 deque() ，其 popleft() 方法�
 
 
 # 2 Graph Traversal - DFS, BFS, Topological Sorting  **
+
+Breadth First Search  
+Depth First Search
+
  a. 133. Clone Graph https://leetcode.com/problems/clone-g... BFS / DFS check
  b. 127. Word Ladder https://leetcode.com/problems/word-la... BFS check
  c. 490. The Maze https://leetcode.com/problems/the-maze/ 
@@ -55,18 +59,18 @@ Divide conquers
  b. 236. Lowest Common Ancestor of a Binary Tree https://leetcode.com/problems/lowest-...check
  c. 297. Serialize and Deserialize Binary Tree https://leetcode.com/problems/seriali... check
  d. 98. Validate Binary Search Tree https://leetcode.com/problems/validat...check
- e. 102. Binary Tree Level Order Traversal https://leetcode.com/problems/binary-... (BFS)
+ e. 102. Binary Tree Level Order Traversal https://leetcode.com/problems/binary-... (BFS)  check
 
 
 
 # 4 Binary Search (二分法) O（logN）
  a. 34. Find First and Last Position of Element in Sorted Array https://leetcode.com/problems/find-fi... check
  b. 162. Find Peak Element https://leetcode.com/problems/find-pe...
- c. 69. Sqrt(x) https://leetcode.com/problems/sqrtx/
+ c. 69. Sqrt(x) https://leetcode.com/problems/sqrtx/  check
   
 
 # 5 Data Structure
- a. 242. Valid Anagram https://leetcode.com/problems/valid-a... (Hash Table)
+ a. 242. Valid Anagram https://leetcode.com/problems/valid-a... (Hash Table) check
  b. 133. Clone Graph https://leetcode.com/problems/clone-g... (Hash Table)
  c. 127. Word Ladder https://leetcode.com/problems/word-la... (Hash Table)
  d. 155. Min Stack https://leetcode.com/problems/min-stack/ (Stack)
