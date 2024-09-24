@@ -31,6 +31,42 @@ Breadth First Search
 Depth First Search
 
  a. 133. Clone Graph https://leetcode.com/problems/clone-g... BFS / DFS check
+
+
+class Solution:
+    # 解法一：BFS
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if node == None:
+            return None
+        h = {node: Node(node.val, [])}      # 初始化哈希表
+        q = collections.deque([node])
+        while(q):
+            cur = q.popleft()
+            for neighbor in cur.neighbors:
+                if neighbor not in h:   # 若近邻节点还未储存在哈希表中
+                    h[neighbor] = Node(neighbor.val, [])    # 则创建其近邻节点的克隆节点
+                    q.append(neighbor)                      # 同时将该近邻节点加入队列中
+                h[cur].neighbors.append(h[neighbor])        # 将克隆的近邻节点，加入当前克隆节点的近邻中
+        return h[node]
+
+class Solution:
+    # 解法二：DFS
+    def dfs(self, cur):
+        for neighbor in cur.neighbors:  # 遍历传入的当前节点cur的所有近邻节点
+            if neighbor not in self.h:  # 若近邻节点还未储存在哈希表中
+                self.h[neighbor] = Node(neighbor.val, [])   # 则创建其近邻节点的克隆节点
+                self.dfs(neighbor)                          # 对该近邻节点进行dfs递归调用
+            self.h[cur].neighbors.append(self.h[neighbor])  # 将克隆的近邻节点，加入当前克隆节点的近邻中
+
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if node == None:
+            return None
+        self.h = {node: Node(node.val, [])}         # 初始化哈希表
+        self.dfs(node)                              # 进行dfs搜索
+        return self.h[node]
+
+
+
  b. 127. Word Ladder https://leetcode.com/problems/word-la... BFS check
  c. 490. The Maze https://leetcode.com/problems/the-maze/ 
 
@@ -74,9 +110,14 @@ Divide conquers
  b. 133. Clone Graph https://leetcode.com/problems/clone-g... (Hash Table)
  c. 127. Word Ladder https://leetcode.com/problems/word-la... (Hash Table)
  d. 155. Min Stack https://leetcode.com/problems/min-stack/ (Stack)
- e. 225. Implement Stack using Queues https://leetcode.com/problems/impleme... (Stack / Queue)
- f. 215. Kth Largest Element in an Array https://leetcode.com/problems/kth-lar... (PriorityQueue)
+ e. 225. Implement Stack using Queues https://leetcode.com/problems/impleme... (Stack / Queue) check
+ f. 215. Kth Largest Element in an Array https://leetcode.com/problems/kth-lar... (PriorityQueue) 
  g. 23. Merge k Sorted Lists https://leetcode.com/problems/merge-k... (PriorityQueue)
+
+
+
+
+
 
 
 **Insertion**: Adding a new element to the data structure.
