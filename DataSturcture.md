@@ -109,6 +109,7 @@ Divide conquers
 
 [] 左闭右闭  合法： 需要while left <= right
 
+[)    左闭右开  合法： 需要while left < right; right = mid; left = mid + 1
 
 
 
