@@ -105,6 +105,12 @@ Divide conquers
  c. 69. Sqrt(x) https://leetcode.com/problems/sqrtx/  check
   
 
+[] 左闭右闭  合法： 需要while left <= right
+
+
+
+
+
 # 5 Data Structure
  a. 242. Valid Anagram https://leetcode.com/problems/valid-a... (Hash Table) check
  b. 133. Clone Graph https://leetcode.com/problems/clone-g... (Hash Table)
@@ -112,7 +118,7 @@ Divide conquers
  d. 155. Min Stack https://leetcode.com/problems/min-stack/ (Stack)
  e. 225. Implement Stack using Queues https://leetcode.com/problems/impleme... (Stack / Queue) check
  f. 215. Kth Largest Element in an Array https://leetcode.com/problems/kth-lar... (PriorityQueue) 
- g. 23. Merge k Sorted Lists https://leetcode.com/problems/merge-k... (PriorityQueue)
+ g. 23. Merge k Sorted Lists https://leetcode.com/problems/merge-k... (PriorityQueue) 
 
 
 
