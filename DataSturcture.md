@@ -105,6 +105,8 @@ Divide conquers
  c. 69. Sqrt(x) https://leetcode.com/problems/sqrtx/  check
   
 
+决定区间合不合法
+
 [] 左闭右闭  合法： 需要while left <= right
 
 
