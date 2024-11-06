@@ -317,6 +317,7 @@ The O(1) time complexity for push and pop operations makes stacks highly efficie
 
 - 堆总是一棵**完全二叉树** 
 - 每个节点总是大于(或小于)它的孩子节点。
+优先级队列其实是一个堆，堆就是一棵完全二叉树，同时保证父子节点的顺序关系。
 
 **对于完全二叉树**，我想大家都能明白，就是最底层叶子节点要严格按照从左向右来。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201006234654325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNjkzMTcx,size_1,color_FFFFFF,t_70)
