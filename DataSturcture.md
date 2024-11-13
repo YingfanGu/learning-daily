@@ -319,12 +319,19 @@ The O(1) time complexity for push and pop operations makes stacks highly efficie
 - 每个节点总是大于(或小于)它的孩子节点。
 优先级队列其实是一个堆，堆就是一棵完全二叉树，同时保证父子节点的顺序关系。
 
+堆就是利用完全二叉树的结构来维护的一维数组, 但堆并不一定是完全二叉树
+
 **对于完全二叉树**，我想大家都能明白，就是最底层叶子节点要严格按照从左向右来。
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201006234654325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNjkzMTcx,size_1,color_FFFFFF,t_70)
 **堆有大根堆和小根堆**，如果是所有父节点都大于子节点的时候，那么这就是个大根堆，反之则为小根堆，以下就是一个大根堆：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201019214838156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNjkzMTcx,size_1,color_FFFFFF,t_70)
 最后需要注意的是我们并不是用链式去储存这个二叉树而是用**数组去存储这个树**，虽然链式的使用场景可能更多一些，但是在完全二叉树的情况下空间使用率较好没有斜树的出现。并且在操作的时候可以直接通过编号找到位置进行交换。
 
+
+大顶堆：每个结点的值都大于或等于其左右孩子结点的值。
+小顶堆：每个结点的值都小于或等于其左右孩子结点的值。
+
+如果是排序，求升序用大顶堆，求降序用小顶堆。
 
 A heap is a specialized tree-based data structure that satisfies the heap property (in a max-heap, the parent node is always greater than or equal to its children; in a min-heap, the parent node is always less than or equal to its children). Here are the time complexities for the search, insert, and delete operations in a heap:
 1.	Insert: O(log⁡n)
