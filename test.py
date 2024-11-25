@@ -1,4 +1,14 @@
-nums = [-1,0,0,1,1,2]
+nums = [1,2,3]
+
+left = 1
+right = len(nums) - 1
+
+
+
+
+b = sum(nums[left:right+1])
+
+
 
 
 n = len(nums)
