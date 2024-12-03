@@ -13,12 +13,25 @@ dict = {
 
 dict.get("name", 2)  # If "name" exists, it returns the value, otherwise it returns 2
 
+dict.pop("name")
 
 
 
 
+for i in range(5, -1, -1):
+    print(i)
+
+
+
+
+from random import choice
 
 nums = [0,1,2,3,4,5,6,7,8,9]
+
+
+choice(nums)
+
+nums.pop()
 
 nums[1:]
 
