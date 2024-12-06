@@ -1,5 +1,21 @@
 
 
+
+
+s = "the sky is blue"
+
+w = reversed(s)
+
+k = reversed(s.split())
+
+result = divmod(-10, 3)
+print(result)  # Output: (-4, 2)
+
+a=10
+b=3
+(a // b, a % b)
+
+
 # Empty dictionary
 dict = {}
 
@@ -16,9 +32,15 @@ dict.get("name", 2)  # If "name" exists, it returns the value, otherwise it retu
 dict.pop("name")
 
 
+res = 'MMKK'
+k = res[1:3]
 
 
-for i in range(5, -1, -1):
+
+K = "".join(res)  
+
+
+for i in range(5):
     print(i)
 
 
