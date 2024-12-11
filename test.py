@@ -4,6 +4,9 @@
 
 s = "the sky is blue"
 
+for i, x in enumerate(s):
+    print(i, x)
+
 w = reversed(s)
 
 k = reversed(s.split())
