@@ -1,6 +1,71 @@
 
 import collections
+
+
+
+
+path = "/home//foo/"
+
+
+stack = ['home', 'foo','ddddd']
+stack.pop()
+
+final_str = "/" + "/".join(stack)
+final_str
+
+st =[]
+st.append([0,0])
+
+token = "+"
+if token is "+":
+    print("yes")
+    
+    
+
+
+
+
+
+
+
+
+for i in range(5):
+
+
+-4 % 5
+
+
+
+
+
+p  = [0, 1, 2, 3, 4]
+
+len(p)
+
+
+def move(p, U):
+    q = []
+    for i in range(len(p)):
+        print((i-U) % len(p))
+        q.append(p[(i-U) % len(p)])
+        
+    return q
+
+
+print(move(p, 1))
+
+
+
+
+
+
+
 nums = [100,4,200,1,3,2,2]
+
+intervals = [[1,3],[8,10],[15,18],[2,6]]
+
+K = intervals.sort()
+K
 
 str1 = collections.Counter(nums) 
 str2 = collections.defaultdict(nums)
@@ -12,6 +77,8 @@ nums = [0,3,7,2,5,8,4,6,0,1]
 
 m = set(nums)
 m
+
+
 
 
 
