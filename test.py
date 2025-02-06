@@ -24,10 +24,39 @@ if token is "+":
     
 
 
+graph = {}
+graph["a"] = {}
+
+graph["a"]["b"] = 2
+
+
+
+prerequisites = [[1,0],[1,2],[0,2]]
+numCourses = 3
+indegree = [0] * numCourses
+adj1 = [[] for _ in range(numCourses)]
+
+adj2 = [0] * numCourses
+
+
+for prerequisite in prerequisites:
+    adj[prerequisite[1]].append(prerequisite[0])
+    indegree[prerequisite[0]] += 1
 
 
 
 
+
+
+
+for neighbor, weight in graph["a"].items():
+    print(neighbor, weight)
+
+
+queries = [["a","c"],["b","a"],["a","e"]]
+
+for i, (q,p) in enumerate(queries):
+    print(i, q,p)
 
 
 for i in range(5):
