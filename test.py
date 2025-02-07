@@ -22,12 +22,17 @@ if token is "+":
     print("yes")
     
     
-
+for c in "ACGT":
+    
+    print(c)
 
 graph = {}
 graph["a"] = {}
 
 graph["a"]["b"] = 2
+
+n = 3
+K = [None] * (n**2 + 1)
 
 
 
