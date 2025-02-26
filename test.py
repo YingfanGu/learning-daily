@@ -3,6 +3,13 @@ import collections
 import numpy as np
 
 
+A = [x for x in range(20)]
+print(A)
+
+
+for i in range(0, len(A) - 1, 2):
+    print(i)
+
 
 
 path = "/home//foo/"
@@ -42,12 +49,6 @@ indegree = [0] * numCourses
 adj1 = [[] for _ in range(numCourses)]
 
 adj2 = [0] * numCourses
-
-
-for prerequisite in prerequisites:
-    adj[prerequisite[1]].append(prerequisite[0])
-    indegree[prerequisite[0]] += 1
-
 
 
 
