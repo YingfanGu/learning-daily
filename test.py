@@ -2,6 +2,16 @@
 import collections
 import numpy as np
 
+x = 121
+
+
+s ="leet"
+
+
+s[1:4]
+
+
+print(len(x))
 
 A = [x for x in range(20)]
 print(A)
