@@ -2,6 +2,27 @@
 import collections
 import numpy as np
 
+
+from collections import deque
+
+word1 = "abc"
+word2 = "pqr"
+res = ""
+q = deque(word1)
+res = res + q
+
+
+i = q.popleft()
+
+res = res + i + word2
+
+
+print(res)
+
+
+
+
+
 x = 121
 
 
@@ -59,6 +80,11 @@ indegree = [0] * numCourses
 adj1 = [[] for _ in range(numCourses)]
 
 adj2 = [0] * numCourses
+
+
+
+
+
 
 
 
